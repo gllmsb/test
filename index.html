@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hamburger.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav.menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-width: 400px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #333;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .category:hover {
+            color: #F24E1E;
+        }
+
+        .items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 8px 8px;
+            z-index: 1;
+        }
+
+        .category:hover .items {
+            display: block;
+        }
+
+        .items li {
+            margin-bottom: 0.5em;
+            color: #666;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .items li:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+    <script src="site.js"></script>
+</head>
+<body>
+    <!-- HAMBURGER MENU -->
+    <label class="hamburger-menu">
+        <input type="checkbox">
+    </label>
+    <aside class="sidebar">
+        <nav>
+            <div>this</div>
+            <div>this</div>
+            <div>this</div>
+            <div>this</div>
+        </nav>
+    </aside>
+    <!-- SECTION MENU -->
+    <nav class="menu">
+        <div class="category">Electronics
+            <ul class="items">
+                <li>Smartphones</li>
+                <li>Laptops</li>
+                <li>Lighting</li>
+            </ul>
+        </div>
+
+        <div class="category">Cosmetics
+            <ul class="items">
+                <li>Fragrances</li>
+                <li>Skincare</li>
+            </ul>
+        </div>
+
+        <div class="category">Vehicles
+            <ul class="items">
+                <li>Automotive</li>
+                <li>Motorcycle</li>
+            </ul>
+        </div>
+        
+        <div class="category">Vehicles
+            <ul class="items">
+                <li>Automotive</li>
+                <li>Motorcycle</li>
+            </ul>
+        </div>
+
+
+    </nav>
+</body>
+</html>
